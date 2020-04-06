@@ -15,7 +15,7 @@ puppeteer
 		const $ = cheerio.load(html);
 		var fiis = [];
 
-		const tabela = $('#filter--result-table_wrapper tr').each(function(){
+		const tabela = $('#filter--result-table tr').each(function(){
 			fiiRow = new Object();
 			fiiRow.ticker = $(this).find('td').eq(0).text().trim();
 			fiiRow.pAlvo = $(this).find('td').eq(1).text().trim();
@@ -31,7 +31,7 @@ puppeteer
 			//
 			//
 			//
-			fiiRow.constistas = $(this).find('td').eq(14).text().trim();
+			fiiRow.cotistas = $(this).find('td').eq(14).text().trim();
 			fiiRow.patrimonio = $(this).find('td').eq(15).text().trim();
 			console.log(fiiRow);
 		})
